@@ -260,7 +260,7 @@ html{overflow-x:clip}
 .fbtn{display:flex;flex-wrap:wrap;gap:12px}
 @media(min-width:900px){.fgrid{grid-template-columns:1.15fr 1fr;gap:64px}.farm{padding:110px 0 60px}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Ladang Ternakan Ismail", "alternateName": "Gombak Farming Sdn Bhd", "description": "Biri-biri aqiqah dan korban, kambing masak kuzi, kari dan kurma, susu kambing dan lembu tempahan khas di Kampung Tengah, Gombak.", "telephone": "+601128096559", "url": "https://ladangismail.com/", "image": "https://ladangismail.com/img/og.jpg", "address": {"@type": "PostalAddress", "streetAddress": "Kampung Tengah", "postalCode": "53100", "addressLocality": "Gombak", "addressRegion": "Selangor", "addressCountry": "MY"}, "areaServed": ["Gombak", "Kuala Lumpur", "Selangor"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Ladang Ternakan Ismail", "alternateName": "Gombak Farming Sdn Bhd", "description": "Biri-biri aqiqah dan korban, kambing masak kuzi, kari dan kurma, susu kambing dan lembu tempahan khas di Kampung Tengah, Gombak.", "telephone": "+601128096559", "url": "https://ladangismail.com/", "image": "https://ladangismail.com/img/og.jpg", "address": {"@type": "PostalAddress", "streetAddress": "Kampung Tengah", "postalCode": "53100", "addressLocality": "Gombak", "addressRegion": "Selangor", "addressCountry": "MY"}, "areaServed": ["Gombak", "Kuala Lumpur", "Selangor"], "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJg57e5n04zDER2JER6fP15qo"}</script>
 </head>
 <body>
 <header class="top" id="hdr"><div class="wrap">
@@ -364,6 +364,7 @@ html{overflow-x:clip}
 </div></section>
 </main>
 
+<section class="hwd-ulasan" style="text-align:center;padding:40px 20px;border-top:1px solid rgba(127,127,127,.25)"><p style="margin:0 0 6px;font-size:1.15rem;font-weight:700">Pernah beli biri-biri, aqiqah atau korban dengan kami?</p><p style="margin:0 0 16px;opacity:.8">Kongsikan pengalaman di Google. Ulasan tuan/puan membantu orang lain membuat pilihan.</p><a href="https://search.google.com/local/writereview?placeid=ChIJg57e5n04zDER2JER6fP15qo" target="_blank" rel="noopener" style="display:inline-block;padding:12px 22px;border-radius:999px;background:#fff;color:#1f1f1f;border:1px solid #dadce0;font-weight:700;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,.15)"><span style="color:#fbbc04">&#9733;</span> Tulis ulasan Google</a></section>
 <footer><div class="wrap">
 <div><b style="font:800 22px var(--f-disp)">Ladang Ternakan Ismail</b><p style="margin:8px 0 0" data-en="Ladang Ternakan Ismail (Gombak Farming Sdn Bhd), Kampung Tengah, Gombak, Selangor">Ladang Ternakan Ismail (Gombak Farming Sdn Bhd), Kampung Tengah, Gombak, Selangor</p></div>
 <div><b data-en="Contact">Hubungi</b><p style="margin:8px 0 0">WhatsApp <a href="https://wa.me/601128096559">011-2809 6559</a></p></div>
@@ -425,7 +426,7 @@ const hantar=jenis=>{try{fetch(U,{method:'POST',keepalive:true,headers:{apikey:K
 try{if(!sessionStorage.getItem('hwd_l')){sessionStorage.setItem('hwd_l','1');hantar('lawat')}}catch(e){hantar('lawat')}
 document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const h=a.href||'';
  if(h.includes('wa.me/')){if((a.id==='go'||a.id==='mbgo')&&!h.includes('?text='))return;hantar(a.id==='go'||a.id==='mbgo'?'wa_kira':'wa')}
- else if(h.includes('google.com/maps'))hantar('peta');else if(h.includes('instagram.com'))hantar('ig');else if(h.includes('tiktok.com'))hantar('tiktok')},true);
+ else if(h.includes('writereview'))hantar('ulasan');else if(h.includes('google.com/maps'))hantar('peta');else if(h.includes('instagram.com'))hantar('ig');else if(h.includes('tiktok.com'))hantar('tiktok')},true);
 })();
 </script>
 
